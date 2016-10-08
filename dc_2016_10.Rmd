@@ -12,6 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Greetings from Maine
 
+Before we start, please, put down your sticky notes, open a new R script (File -> New File -> R Script) and clear all objects from the memory (Environment tab -> little broom icon). 
+
+![](img/barharbor_dsc4068.jpg) 
+
+And many greeting from [The Jackson Laboratory](https://www.jax.org/). Looking for [postdoc position](https://www.jax.org/careers-and-training/career-opportunities/postdoc-positions)?
+
 ## Functions
 
 ### What is a function?
@@ -39,7 +45,7 @@ add <- function(a, b) {
 ```
 
 #### Exercise 1: 
-Write a function of two arguments *a* and *b* that returns *a-b*, for example
+Write a function of two arguments `a` and `b` that returns `a-b`, for example
 
 ```{r substraction, echo=FALSE}
 # substract of two numbers
@@ -64,7 +70,7 @@ b<-6; substract(a=10)
 substract(a = 10, b = a)
 ```
 
-### Default value
+### Defining defaults
 
 And a function can have three or more parameters. For example, let us create a function that
 calculates returns a price given cost, profit and tax.
@@ -76,6 +82,8 @@ price <- function(cost, profit, tax=20) {
   return(after_tax)
 }
 ```
+
+Now we can call `price` function with just two arguments 
 
 ```{r}
 price(cost=10, profit=5)
@@ -127,8 +135,12 @@ wrong_addition(1)
 d
 ```
 
+### 
+
 
 ## Diversity Outbred Dataset
+
+
 
  <http://churchill.jax.org/research/cc/doresources.shtml>.
 
