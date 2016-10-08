@@ -1118,9 +1118,9 @@ abline(v=40000, h=75, lty=2)
 
 #### 2a. Why ggplot?
 
-* More elegant & compact code than with base graphics 
-*􏰀 More aesthetically pleasing defaults than lattice
-*􏰀 Very powerful for exploratory data analysis
+* More elegant & compact code than with base graphics
+* More aesthetically pleasing defaults than lattice
+* Very powerful for exploratory data analysis
 * Follows a grammar, just like any language.
 * It defines basic components that make up a sentence. In this case, the grammar defines components in a plot.
 * *G*rammar of *g*raphics originally coined by Lee Wilkinson
@@ -1358,3 +1358,13 @@ dev.off()
 # Assume we saved our plot is an object called example.plot
 ggsave(filename="example.pdf", plot=example.plot, scale=, width=, height=)
 ```
+
+## Acknowledgements
+
+This presentation is based on three great Data Carpentry repositories:
+
+* [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
+* [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/)
+* [D-Lab workshop on R Graphics](https://github.com/rochelleterman/r-graphics)
+
+DO data were collected at The Jackson Laboratory by Karen Svenson and published in [Genetics](https://dx.doi.org/10.1534/genetics.111.132597). Gapminder data were downloaded from [rochelleterman/r-graphics](https://github.com/rochelleterman/r-graphics/tree/master/data) repository.
