@@ -16,7 +16,7 @@ Before we start, please, put down your sticky notes, open a new R script (File -
 
 ![](img/barharbor_dsc4068.jpg) 
 
-And many greeting from [The Jackson Laboratory](https://www.jax.org/). Looking for [postdoc position](https://www.jax.org/careers-and-training/career-opportunities/postdoc-positions)?
+And many greeting from [The Jackson Laboratory](https://www.jax.org/). Looking for a [postdoc position](https://www.jax.org/careers-and-training/career-opportunities/postdoc-positions)?
 
 ## Functions
 
@@ -67,13 +67,13 @@ substract(10, 6)
 substract(b=6, a=10)
 substract(b=6, 10)
 b<-6; substract(a=10)
-substract(a = 10, b = a)
+substract(a=10, b=a)
 ```
 
 ### Defining defaults
 
-And a function can have three or more parameters. For example, let us create a function that
-calculates returns a price given cost, profit and tax.
+And a function can have even more arguments. For example, let us create a function that
+calculates `price` given `cost`, `profit` and `tax`.
 
 ```{r price}
 price <- function(cost, profit, tax=20) {
@@ -91,7 +91,7 @@ price(cost=10, profit=5)
 
 #### Exercise 2: 
 
-This is a function adding four numbers:
+This is a function for an addition of four numbers:
 ```{r add4}
 add4 <- function(a, b, c, d) {
   return(a+b+c+d)
@@ -127,7 +127,7 @@ wrong_addition <- function(a) {
 wrong_addition(1)
 b <- 1
 wrong_addition(1)
-d <- wrong_addition(3)
+d <- wrong_addition(1)
 b <- 3
 d
 rm(b) # removes variable b
@@ -135,7 +135,21 @@ wrong_addition(1)
 d
 ```
 
-### 
+### Some useful R functions
+
+If you need a help for R function `something`, use `help(something)` or just `?something`. If you do not know the function name, try to google it (google: *R function for average*).
+
+#### Exercise 3
+
+What is R function for standard deviation?
+
+![xkcd joke](https://imgs.xkcd.com/comics/tar.png)
+
+
+
+
+
+
 
 
 ## Diversity Outbred Dataset
