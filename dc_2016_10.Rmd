@@ -16,12 +16,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### What is a function?
 
-Functions gather a sequence of operations into a whole, preserving it for ongoing use. Functions provide:
+Functions gather a sequence of operations into a whole, preserving it for ongoing use. 
+
+Functions provide:
 
 * a name we can remember and invoke it by
 * relief from the need to remember the individual operations
 * a defined set of inputs and expected outputs
 * rich connections to the larger programming environment
+
+In the morning you have learned to create a function with one argument. Now, we will continue with functions of two or more arguments.
+
+### Functions of more than one argument
 
 Let us start with a function adding two numbers:
 
@@ -48,17 +54,81 @@ substract(a=10, b=6)
 
 #### Exercise 1 extras:
 
-First, try to predict what happens. Then copy the code to R to see the answer:
+First, try to predict what will happen. Then copy the code to R console to see the answer:
 
 ```{r example1p, eval=FALSE}
 substract(10, 6)
 substract(b=6, a=10)
 substract(b=6, 10)
 b<-6; substract(a=10)
+substract(a = 10, b = a)
+```
+
+### Default value
+
+And a function can have three or more parameters. For example, let us create a function that
+calculates returns a price given cost, profit and tax.
+
+```{r price}
+price <- function(cost, profit, tax=20) {
+  before_tax <- cost + profit
+  after_tax <- before_tax * (1 + tax/100)
+  return(after_tax)
+}
+```
+
+```{r}
+price(cost=10, profit=5)
+```
+
+#### Exercise 2: 
+
+This is a function adding four numbers:
+```{r add4}
+add4 <- function(a, b, c, d) {
+  return(a+b+c+d)
+}
+
+add4(1,2,3,4)
+```
+
+Modify this function, so it will work for one, two or three arguments
+
+```{r add4modified, echo=FALSE}
+# substract of two numbers
+add4 <- function(a, b=0, c=0, d=0) {
+  return(a+b+c+d)
+}
+```
+
+```{r}
+add4(1,2,3)
+add4(1,2)
+add4(8)
+```
+
+#### Exercise 2 extras:
+
+First, try to predict what will happen. Then copy the code to R console to see the answer:
+
+```{r, eval=FALSE}
+wrong_addition <- function(a) {
+  return(a+b)
+}
+
+wrong_addition(1)
+b <- 1
+wrong_addition(1)
+d <- wrong_addition(3)
+b <- 3
+d
+rm(b) # removes variable b
+wrong_addition(1)
+d
 ```
 
 
-## Diversity Outbred Phenotypes
+## Diversity Outbred Dataset
 
  <http://churchill.jax.org/research/cc/doresources.shtml>.
 
