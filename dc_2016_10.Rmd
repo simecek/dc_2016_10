@@ -1,0 +1,73 @@
+---
+title: "Software For Scientists (1st Day Afternoon)"
+output: 
+  github_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Greetings from Maine
+
+## Functions
+
+### What is a function?
+
+Functions gather a sequence of operations into a whole, preserving it for ongoing use. Functions provide:
+
+* a name we can remember and invoke it by
+* relief from the need to remember the individual operations
+* a defined set of inputs and expected outputs
+* rich connections to the larger programming environment
+
+Let us start with a function adding two numbers:
+
+```{r addition}
+# addition of two numbers
+add <- function(a, b) {
+  return(a+b)
+}
+```
+
+#### Exercise 1: 
+Write a function of two arguments *a* and *b* that returns *a-b*, for example
+
+```{r substraction, echo=FALSE}
+# substract of two numbers
+substract <- function(a, b) {
+  return(a-b)
+}
+```
+
+```{r example1}
+substract(a=10, b=6)
+```
+
+#### Exercise 1 extras:
+
+First, try to predict what happens. Then copy the code to R to see the answer:
+
+```{r example1p, eval=FALSE}
+substract(10, 6)
+substract(b=6, a=10)
+substract(b=6, 10)
+b<-6; substract(a=10)
+```
+
+
+## Diversity Outbred Phenotypes
+
+ <http://churchill.jax.org/research/cc/doresources.shtml>.
+
+
+```{r dataset}
+# bit.ly/mousepheno is a shortcut for svenson_149.csv dataset
+# see https://github.com/simecek/dc_2016_10 
+dt <- read.csv("http://bit.ly/mousepheno")
+```
+
+## Acknowledgements
+
